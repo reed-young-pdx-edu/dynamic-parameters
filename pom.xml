@@ -24,8 +24,8 @@
     </organization>
     <developers>
         <developer>
-            <name>David Cohoe</name>
-            <email>dcohoe@pdx.edu</email>
+            <name>Reed Young</name>
+            <email>rry@pdx.edu</email>
             <roles>
                 <role>developer</role>
             </roles>
@@ -60,7 +60,7 @@
         <!-- NB: for project parent -->
         <repository>
             <id>imagej.public</id>
-            <url>http://maven.imagej.net/content/groups/public</url>
+            <url>https://maven.imagej.net/content/groups/public</url>
         </repository>
     </repositories>
     <properties>
