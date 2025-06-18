@@ -1,9 +1,9 @@
-Copyright (C) 2019 Portland State University
-Dynamic Parameters for ImageJ2 - David Cohoe
+Copyright (C) 2025 Portland State University
+Dynamic Parameters for ImageJ2 - Reed Young
 
 Dynamic Parameters is a preprocessor plugin for ImageJ2 that allows for more
 customization in the input parameters for commands.  It allows for the number
-and types of parameters to be constantly changing in response to user input.
+and types of parameters to be changed dynamically in response to user input.
 It is well suited for commands that have different parameters depending on other
 parameters, such as a command that runs different algorithms that each have
 different inputs.  It also has support for errors and warnings that depend on
@@ -12,22 +12,22 @@ the inputs.
 INSTALLATION
 
 To install the plugin, the update site "DHM Utilities" with the URL
-"http://sites.imagej.net/Sudgy/" must be added in the ImageJ updater.  If you
-want to modify the plugin, or if you want to install the plugin without
-everything else from DHM utilities, compile it with maven and then copy the jar
-to the ImageJ plugins folder, removing the old one if you need to.  This plugin
-does not have any dependencies on anything other than what should already be
-included in an ImageJ2/Fiji distribution, and maven should not have any issues
-with compiling it.  The documentation can be created using maven's javadoc
+"http://sites.imagej.net/Sudgy/" may simply be added in the ImageJ updater.  To modify the plugin or to install it without
+the rest of DHM utilities, compile with maven and then copy the jar
+to the ImageJ plugins folder, removing the old one if you need to.  Dependencies, listed in pom.xml, are likely already included in the ImageJ2/Fiji distribution, so any errors encountered while compiling are likely due to repositories moving.
+
+The documentation can be created using maven's javadoc
 plugin, and will be created in target/site/apidocs/.
 
 USE
 
-This plugin should only be used by an ImageJ2 programmer, and not by an end-user
-of ImageJ.  It is designed only for the development of other plugins.
+This plugin is intended for ImageJ2 programmers, to enhance other plugins by
+allowing dynamic changes to parameters.  End-users of ImageJ will not
+necessarily know they are using this plugin, when it is called by the
+plugin that they are directly using.
 
-To use the plugin, you must have a SciJava @Parameter of a type that implements
-the DParameter interface.  The DynamicPreprocessor class will find all of these
+To use this plugin, the programmer must have (or define) a SciJava @Parameter of a type that implements
+the DParameter interface.  The DynamicPreprocessor class will find all of those
 parameters and make a dialog for them.  (Note that this is separate from the
 normal populating of parameters, so if you have a mixture of normal parameters
 and dynamic parameters, two dialogs will show.)  DParameter is a generic type,
@@ -48,8 +48,7 @@ There are 5 types of simple parameters that come packaged with the plugin:
 
 In addition to these simple parameters, there is also the abstract class
 HoldingParameter.  It is meant to be the superclass for any parameter that holds
-other parameters.  Please consult the documentation for how to use it.
-
+other parameters.  Please consult that class's documentation on its use.
 
 If you have any questions that are not answered here, in the documentation, or
-in the source code, please email David Cohoe at dcohoe@pdx.edu.
+in the source code, please email Reed Young at rry@pdx.edu.
